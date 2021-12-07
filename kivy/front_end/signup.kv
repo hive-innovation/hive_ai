@@ -1,7 +1,5 @@
 
-MDScreen:
-    name:"signup"
-    
+<Signup>:
     MDFloatLayout:
         md_bg_color:1,1,1,1
         MDIconButton:
@@ -12,7 +10,7 @@ MDScreen:
             text_color: rgba(26,24,58,255)
             on_release:
                 root.manager.transition.direction="right"
-                root.manager.current="main"
+                root.manager.current="home"
         MDLabel:
             text:"H I !"
             #font_name:"BPoppins"
@@ -54,7 +52,7 @@ MDScreen:
             pos_hint:{"center_x": .5, "center_y": .56}
             TextInput:
                 id:signup_email
-                hint_text:"Email"
+                hint_text:"Email/Phone Number"
                 #font_name:"MPoppins"
                 size_hint_y:.75
                 pos_hint:{"center_x": .43,"center_y":.5}
@@ -66,7 +64,7 @@ MDScreen:
                 icon_right: 'email'
                 required: True
                 multiline:False
-                password: True
+                
             MDFloatLayout:
                 pos_hint:{"center_x": .45,"center_y":.0}
                 size_hint_y:.03
@@ -101,6 +99,8 @@ MDScreen:
             pos_hint:{"center_x": .5, "center_y": .3}
             background_color:0, 0, 0, 0
             #font_name:"BPoppins"
+            on_release:
+                app.signup()
             canvas.before:
                 Color:
                     rgb:rgba(52,0,231,255)

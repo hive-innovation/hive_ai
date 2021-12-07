@@ -1,0 +1,29 @@
+  
+<HomeScreen>:
+    
+
+    
+    MDBoxLayout: 
+        orientation: "vertical"
+        md_bg_color:1,1,1,1
+        MDToolbar: 
+            md_bg_color:1,1,1,1
+            id: logoToolBar
+            height: 50
+            title: "Home"
+            right_action_items: [['dots-vertical', lambda x: app.show_theme_picker()]]
+        MDFloatLayout:
+            md_bg_color:1,1,1,1
+            
+            MDLabel:
+                text:"Welcome to Home "
+                #font_name:"BPoppins"
+                font_size:"26sp"
+                pos_hint:{"center_x": .5, "center_y": .85}
+                
+                color:rgba(0,0,54,255)
+    MDBoxLayout:
+        size_hint_y: None
+        md_bg_color: 0, 0, 0, 0
+        NavBar:
+            one: [1, 1, 1, 1]

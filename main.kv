@@ -1,0 +1,60 @@
+<HiveMain>:
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+        Image:
+            source:"assets/images/Farm.png"
+            pos_hint:{"center_x": .5, "center_y": .98}
+        Image:
+            source:"assets/images/logo1.png"
+            size_hint: .8, .8
+            pos_hint:{"center_x": .5, "center_y": .65}
+        MDLabel:
+            text:"H e l l o! Welcome to The Hive Accademia App for Champions"
+            #font_name:"BPoppins"
+            font_size:"20sp"
+            halign:"center"
+            color:rgba(34,34,34,255)
+        MDLabel:
+            text:"Best platform to learn from top expreinced AI teachers with lots of materials"
+            #font_name:"BPoppins"
+            font_size:"18sp"
+            size_hint_x: .85
+            pos_hint:{"center_x": .5, "center_y": .3}
+            halign:"center"
+            color:rgba(34,34,34,255)
+        Button:
+            text:"LOGIN"
+            size_hint: .66, .065
+            pos_hint:{"center_x": .5, "center_y": .18}
+            background_color:0, 0, 0, 0
+            #font_name:"BPoppins"
+            on_release:
+                root.manager.transition.direction="left"
+                app.change_screen('login')
+            canvas.before:
+                Color:
+                    rgb:rgba(52,0,231,255)
+                RoundedRectangle:
+                    size: self.size
+                    pos:self.pos
+                    radius:[6]
+        Button:
+            text:"SIGNUP"
+            size_hint: .66, .065
+            pos_hint:{"center_x": .5, "center_y": .09}
+            background_color:0, 0, 0, 0
+            #font_name:"BPoppins"
+            color:rgba(52,0,231,255)
+            on_release:
+                root.manager.transition.direction="right"
+                app.change_screen('signup')
+            canvas.before:
+                Color:
+                    rgb:rgba(52,0,231,255)
+                Line:
+                    width: 1.2
+                    rounded_rectangle:self.x,self.y,self.width,self.height,5,5,5,5,100
+
+                    
+        
+        
