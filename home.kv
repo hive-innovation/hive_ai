@@ -1,0 +1,43 @@
+<Home>: 
+   MDIconButton:
+         id: icon
+         icon: 
+         user_font_size: "48sp"
+         pos_hint: #topleft
+         on_release: #nav
+   #this is to create search bar
+   MDTextField:
+        icon_right: "search"
+        hint_text: "search"
+        pos_hint: {"center_x":.5, "center_y":1}
+   MDBoxLayout:
+     orientation: "vertical"
+     MDToolbar:
+       
+     MDTabs:
+        id: tabs
+   <Tab>
+      MDList:
+        MDIconButton:
+            id: icon
+            icon: 
+            user_font_size: "48sp"
+            pos_hint: {"center_x":-.5, "center_y":-1}
+        MDIconButton:
+            id: icon
+            icon: 
+            user_font_size: "48sp"
+            pos_hint: {"center_x":0, "center_y":-1}
+            on_release: #to recent
+        MDIconButton:
+            id: icon
+            icon: 
+            user_font_size: "48sp"
+            pos_hint: {"center_x":.5, "center_y": -1}
+            on_release: #ask
+      MDIconButton:
+            id: icon
+            icon: 
+            user_font_size: "48sp"
+            pos_hint: {"center_x":1, "center_y":-1}
+            on_release: #assignments
